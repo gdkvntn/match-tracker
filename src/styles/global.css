@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Tactic Sans";
+  src: url("../assets/fonts/TacticSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-tactic: "Tactic Sans", sans-serif;
+
+  --animate-spin-rotate: spin-rotate 1s linear infinite;
+
+  @keyframes spin-rotate {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  padding: 42px;
+  min-height: 100vh;
+  background-color: #06080c;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transition: 0.3s linear;
+  transform: scale(0.95);
+}
